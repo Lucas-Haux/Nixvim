@@ -9,7 +9,7 @@
       servers = {
         html = {enable = true;};
         lua-ls = {enable = true;};
-        nil-ls = {enable = true;};
+        rnix-lsp = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
         gopls = {enable = true;};
@@ -18,7 +18,9 @@
         ansiblels = {enable = true;};
         jsonls = {enable = true;};
         dartls = {enable = true;};
+        cssls = {enable = true;};
         rust-analyzer = {enable = true;};
+        ts_ls = {enable = true;};
         helm-ls = {
           enable = true;
           extraOptions = {
