@@ -19,7 +19,7 @@
         dartls = {enable = true;};
         cssls = {enable = true;};
         rust-analyzer = {enable = true;};
-        ts_ls = {enable = true;};
+        eslint = {enable = true;};
         helm-ls = {
           enable = true;
           extraOptions = {
