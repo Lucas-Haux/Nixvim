@@ -11,7 +11,7 @@ _: {
         disabledFiletypes = {
           statusline = ["startup" "alpha"];
         };
-        theme = "catppuccin";
+        theme = "nord";
       };
       sections = {
         lualine_a = [
@@ -62,20 +62,6 @@ _: {
           {
             __unkeyed-1 = "filename";
             path = 1;
-          }
-          {
-            __unkeyed-1.__raw = ''
-              function()
-                local icon = " "
-                local status = require("copilot.api").status.data
-                return icon .. (status.message or " ")
-              end,
-
-              cond = function()
-               local ok, clients = pcall(vim.lsp.get_clients, { name = "copilot", bufnr = 0 })
-               return ok and #clients > 0
-              end,
-            '';
           }
         ];
         lualine_y = [
