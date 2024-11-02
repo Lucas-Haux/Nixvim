@@ -14,6 +14,8 @@
     };
 
     opts = {
+      undofile = true;
+
       # Show line numbers
       number = true;
 
