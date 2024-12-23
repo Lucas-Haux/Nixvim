@@ -137,8 +137,8 @@
           isort = {
             command = "${lib.getExe pkgs.isort}";
           };
-          alejandra = {
-            command = "${lib.getExe pkgs.alejandra}";
+          nixfmt = {
+            command = "${lib.getExe pkgs.nixfmt-rfc-style}";
           };
           jq = {
             command = "${lib.getExe pkgs.jq}";

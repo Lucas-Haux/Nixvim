@@ -1,25 +1,56 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   plugins = {
-    lsp-lines = {enable = true;};
-    lsp-format = {enable = false;};
-    helm = {enable = true;};
+    lsp-lines = {
+      enable = true;
+    };
+    lsp-format = {
+      enable = false;
+    };
+    helm = {
+      enable = true;
+    };
     lsp = {
       enable = true;
       inlayHints = true;
       servers = {
-        html = {enable = true;};
-        lua-ls = {enable = true;};
-        marksman = {enable = true;};
-        pyright = {enable = true;};
-        gopls = {enable = true;};
-        terraformls = {enable = true;};
+        html = {
+          enable = true;
+        };
+        lua-ls = {
+          enable = true;
+        };
+        marksman = {
+          enable = true;
+        };
+        pyright = {
+          enable = true;
+        };
+        gopls = {
+          enable = true;
+        };
+        terraformls = {
+          enable = true;
+        };
         # tsserver = {enable = true;};
-        ansiblels = {enable = true;};
-        jsonls = {enable = true;};
-        dartls = {enable = true;};
-        cssls = {enable = true;};
-        rust-analyzer = {enable = true;};
-        eslint = {enable = true;};
+        ansiblels = {
+          enable = true;
+        };
+        jsonls = {
+          enable = true;
+        };
+        dartls = {
+          enable = true;
+        };
+        cssls = {
+          enable = true;
+        };
+        rust-analyzer = {
+          enable = true;
+        };
+        eslint = {
+          enable = true;
+        };
         helm-ls = {
           enable = true;
           extraOptions = {
@@ -46,8 +77,10 @@
                   "http://json.schemastore.org/ansible-playbook" = "*play*.{yml,yaml}";
                   "http://json.schemastore.org/chart" = "Chart.{yml,yaml}";
                   "https://json.schemastore.org/dependabot-v2" = ".github/dependabot.{yml,yaml}";
-                  "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" = "*docker-compose*.{yml,yaml}";
-                  "https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json" = "*flow*.{yml,yaml}";
+                  "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" =
+                    "*docker-compose*.{yml,yaml}";
+                  "https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json" =
+                    "*flow*.{yml,yaml}";
                 };
               };
             };
