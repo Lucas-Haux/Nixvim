@@ -9,7 +9,10 @@ _: {
           "neo-tree"
         ];
         disabledFiletypes = {
-          statusline = ["startup" "alpha"];
+          statusline = [
+            "startup"
+            "alpha"
+          ];
         };
         theme = "nord";
       };
@@ -37,7 +40,7 @@ _: {
         lualine_c = [
           {
             __unkeyed-1 = "diagnostics";
-            sources = ["nvim_lsp"];
+            sources = [ "nvim_lsp" ];
             symbols = {
               error = " ";
               warn = " ";
@@ -45,9 +48,7 @@ _: {
               hint = "󰝶 ";
             };
           }
-          {
-            __unkeyed-1 = "navic";
-          }
+          { __unkeyed-1 = "navic"; }
         ];
         lualine_x = [
           {
@@ -64,16 +65,8 @@ _: {
             path = 1;
           }
         ];
-        lualine_y = [
-          {
-            __unkeyed-1 = "progress";
-          }
-        ];
-        lualine_z = [
-          {
-            __unkeyed-1 = "location";
-          }
-        ];
+        lualine_y = [ { __unkeyed-1 = "progress"; } ];
+        lualine_z = [ { __unkeyed-1 = "location"; } ];
       };
     };
   };
