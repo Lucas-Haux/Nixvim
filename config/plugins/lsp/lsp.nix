@@ -1,4 +1,10 @@
-{ pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  self,
+  ...
+}:
 {
   plugins = {
     lsp-lines = {
@@ -51,6 +57,9 @@
         eslint = {
           enable = true;
         };
+        nil-ls = {
+          enable = true;
+        };
         nixd = {
           enable = true;
           settings =
@@ -58,15 +67,13 @@
               flake = ''(builtins.getFlake "github:Lucas-Haux/Flake)""'';
             in
             {
-              nixpkgs = {
-                expr = "import ${flake}.inputs.nixpkgs { }";
-              };
+              nixpkgs.expr = "import ${flake}.inputs.nixpkgs { }";
               formatting = {
                 command = [ "${lib.getExe pkgs.nixfmt-rfc-style}" ];
               };
               options = {
                 nixos.expr = ''${flake}.nixosConfigurations.desktop.options'';
-                home_manager.expr = ''${flake}.homeConfigurations.desktop.options'';
+                home-manager.expr = ''${flake}.homeConfigurations.luke@desktop.options'';
               };
             };
         };
