@@ -1,8 +1,6 @@
 {
-  config,
   pkgs,
   lib,
-  self,
   ...
 }:
 {
@@ -24,6 +22,9 @@
           enable = true;
         };
         lua-ls = {
+          enable = true;
+        };
+        bashls = {
           enable = true;
         };
         marksman = {

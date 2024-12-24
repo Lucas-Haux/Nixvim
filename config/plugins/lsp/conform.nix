@@ -123,6 +123,11 @@
             "shellharden"
             "shfmt"
           ];
+          sh = [
+            "shellcheck"
+            "shellharden"
+            "shfmt"
+          ];
           json = [ "jq" ];
           "_" = [ "trim_whitespace" ];
         };
