@@ -42,6 +42,7 @@ _: {
     ./plugins/git/gitsigns.nix
 
     # Utils
+    ./plugins/utils/flutter-tools.nix
     ./plugins/utils/telescope.nix
     ./plugins/utils/whichkey.nix
     ./plugins/utils/extra_plugins.nix

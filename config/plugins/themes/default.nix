@@ -48,4 +48,15 @@
       };
     };
   };
+  highlightOverride = {
+    "@boolean" = {
+      fg = "#b48ead";
+    };
+    "@type" = {
+      fg = "#8fbcbb";
+    };
+    type = {
+      fg = "#8fbcbb";
+    };
+  };
 }
