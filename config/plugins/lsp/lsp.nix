@@ -47,7 +47,7 @@
           enable = true;
         };
         dartls = {
-          enable = true;
+          enable = false;
         };
         cssls = {
           enable = true;
