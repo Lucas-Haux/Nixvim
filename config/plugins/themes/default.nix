@@ -4,6 +4,8 @@
       enable = true;
       settings = {
         transparent_background = true;
+        disable_background = true;
+        # contrast = true;
         integrations = {
           cmp = true;
           notify = true;
