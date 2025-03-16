@@ -21,7 +21,7 @@
         html = {
           enable = true;
         };
-        lua-ls = {
+        lua_ls = {
           enable = true;
         };
         bashls = {
@@ -52,13 +52,15 @@
         cssls = {
           enable = true;
         };
-        rust-analyzer = {
+        rust_analyzer = {
           enable = true;
+          installCargo = true;
+          installRustc = true;
         };
         eslint = {
           enable = true;
         };
-        nil-ls = {
+        nil_ls = {
           enable = true;
         };
         nixd = {
