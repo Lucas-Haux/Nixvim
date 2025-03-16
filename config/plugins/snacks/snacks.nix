@@ -9,6 +9,7 @@
       statuscolumn.enabled = true;
       words.enabled = true;
       scroll.enabled = true;
+      image.enabled = true;
       notifier = {
         enabled = true;
         timeout = 2000;
