@@ -80,7 +80,7 @@
               };
             };
         };
-        helm-ls = {
+        helm_ls = {
           enable = true;
           extraOptions = {
             settings = {
