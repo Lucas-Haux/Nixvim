@@ -47,10 +47,25 @@
 
         window = {
           completion = {
-            border = "solid";
+            border = "rounded";
+            winhighlight = "Normal:Normal,FloatBorder:Normal,Search:NONE";
+            side_padding = 0;
+            col_offset = -2;
+            scrollbar = false;
+          };
+          menu = {
+            border = "rounded";
+            winhighlight = "Normal:Normal,FloatBorder:Normal,Search:NONE";
+            side_padding = 0;
+            col_offset = -2;
+            scrollbar = false;
           };
           documentation = {
-            border = "solid";
+            border = "rounded";
+            winhighlight = "Normal:Normal,FloatBorder:Normal,Search:NONE";
+            side_padding = 0;
+            col_offset = -2;
+            scrollbar = false;
           };
         };
 
@@ -138,5 +153,6 @@
        }, {
          { name = 'cmdline' }
        }),
-     })  '';
+     })  
+  '';
 }
