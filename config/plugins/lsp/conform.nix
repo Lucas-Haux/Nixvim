@@ -73,57 +73,47 @@
           end
         '';
         notify_on_error = true;
+
         formatters_by_ft = {
-          html = [
-            [
-              "prettierd"
-              "prettier"
-            ]
-          ];
-          css = [
-            [
-              "prettierd"
-              "prettier"
-            ]
-          ];
-          javascript = [
-            [
-              "prettierd"
-              "prettier"
-            ]
-          ];
-          typescript = [
-            [
-              "prettierd"
-              "prettier"
-            ]
-          ];
+          html = {
+            __unkeyed-1 = "prettierd";
+            __unkeyed-2 = "prettier";
+            stop_after_first = true;
+          };
+          css = {
+            __unkeyed-1 = "prettierd";
+            __unkeyed-2 = "prettier";
+            stop_after_first = true;
+          };
+          # javascript = {
+          #   __unkeyed-1 = "prettierd";
+          #   __unkeyed-2 = "prettier";
+          #   stop_after_first = true;
+          # };
+          typescript = {
+            __unkeyed-1 = "prettierd";
+            __unkeyed-2 = "prettier";
+            stop_after_first = true;
+          };
           python = [
             "black"
             "isort"
           ];
           lua = [ "stylua" ];
-          nix = [ "nixfmt" ];
-          markdown = [
-            [
-              "prettierd"
-              "prettier"
-            ]
-          ];
-          yaml = [
-            [
-              "prettierd"
-              "prettier"
-            ]
-          ];
+          nix = [ "nixfmt-rfc-style" ];
+          markdown = {
+            __unkeyed-1 = "prettierd";
+            __unkeyed-2 = "prettier";
+            stop_after_first = true;
+          };
+          yaml = {
+            __unkeyed-1 = "prettierd";
+            __unkeyed-2 = "prettier";
+            stop_after_first = true;
+          };
           terraform = [ "terraform_fmt" ];
           bicep = [ "bicep" ];
           bash = [
-            "shellcheck"
-            "shellharden"
-            "shfmt"
-          ];
-          sh = [
             "shellcheck"
             "shellharden"
             "shfmt"
