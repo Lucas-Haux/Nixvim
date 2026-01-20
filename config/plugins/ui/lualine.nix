@@ -93,7 +93,6 @@ in
             color = {
               bg = "#EBCB8B";
             };
-            separator.left = "";
             separator.right = "";
           }
         ];
