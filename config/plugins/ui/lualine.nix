@@ -10,9 +10,12 @@ in
     '';
   extraConfigLua = # lua
     ''
-      local custom_vscode = require('lualine.themes.nord')
-      custom_vscode.normal.c.bg = 'None'
-      require('lualine').setup { options = { theme  = custom_vscode } }
+      local custom_nord = require('lualine.themes.nord')
+      custom_nord.normal.c.bg = 'None'
+      custom_nord.insert.a.bg = '#A3BE8C'
+      custom_nord.replace.a.bg = '#BF616A'
+
+      require('lualine').setup { options = { theme  = custom_nord } }
     '';
 
   plugins.lualine = {
@@ -36,7 +39,7 @@ in
         };
         sectionSeparators = {
           left = "";
-          right = "  ";
+          right = "";
 
         };
       };
@@ -59,6 +62,8 @@ in
               bg = "#5e81ac";
             };
           }
+        ];
+        lualine_c = [
           {
             __unkeyed-1 = "diff";
             symbols = {
@@ -70,6 +75,7 @@ in
               bg = "#b48ead";
             };
             separator.right = "";
+
           }
           {
             __unkeyed-1 = "diagnostics";
@@ -79,13 +85,18 @@ in
               warn = " ";
               info = " ";
             };
-            color = {
-              bg = "#d08770";
+            diagnostics_color = {
+              warn = {
+                fg = "#D08770";
+              };
             };
+            color = {
+              bg = "#EBCB8B";
+            };
+            separator.left = "";
             separator.right = "";
           }
         ];
-        lualine_c = [ { } ];
         lualine_x = [
           {
             __unkeyed-1 = "filetype";
@@ -94,23 +105,17 @@ in
               bg = "#5e81ac";
             };
           }
+
         ];
-        lualine_y = [
+        lualine_y = [ { } ];
+        lualine_z = [
           {
             __unkeyed-1 = "progress";
             separator.left = "";
-            color = {
-              fg = "#2e3440";
-              bg = "#88c0d0";
-            };
           }
-
-        ];
-        lualine_z = [
           {
             __unkeyed-1 = "location";
             separator.right = "";
-            padding = 2;
           }
         ];
       };
@@ -214,5 +219,6 @@ in
     #   };
     # };
     #
+
   };
 }
