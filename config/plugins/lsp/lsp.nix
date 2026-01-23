@@ -78,8 +78,8 @@
                 command = [ "${lib.getExe pkgs.nixfmt-rfc-style}" ];
               };
               options = {
-                nixos.expr = ''${flake}.nixosConfigurations.desktop.options'';
-                home-manager.expr = ''${flake}.homeConfigurations.luke@desktop.options'';
+                nixos.expr = "${flake}.nixosConfigurations.desktop.options";
+                home-manager.expr = "${flake}.homeConfigurations.luke@desktop.options";
               };
             };
         };
@@ -94,6 +94,9 @@
               };
             };
           };
+        };
+        qmlls = {
+          enable = true;
         };
         yamlls = {
           enable = true;
